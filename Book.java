@@ -7,7 +7,6 @@
  */
 public class Book extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
     private String author;
     private String bookID;
     private String publisher;
@@ -19,7 +18,11 @@ public class Book extends DB_Element
      */
     public Book(String author, String bookID, String publisher, String title, int year)
     {
-
+        this.author = author;
+        this.bookID = bookID;
+        this.publisher = publisher;
+        this.title = title;
+        this.year = year;
     }
 
     /**
@@ -30,7 +33,7 @@ public class Book extends DB_Element
      */
     public String getID()
     {
-        return String bookID;
+        return bookID;
     }
 
     /**
@@ -41,8 +44,6 @@ public class Book extends DB_Element
      */
     public String toString()
     {
-        // 여기에 코드를 작성하세요
-        return y;
+        return "(" + bookID + " " + title + ", " + author + ", " + publisher + ", " + year;
     }
-
 }

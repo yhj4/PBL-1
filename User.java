@@ -15,7 +15,8 @@ public class User extends DB_Element
      */
     public User(Integer stID, String name)
     {
-
+        this.stID = stID;
+        this.name = name;
     }
 
     /**
@@ -26,7 +27,7 @@ public class User extends DB_Element
      */
     public String getID()
     {
-        return String stID;
+        return stID.toString();
     }
 
     /**
@@ -37,7 +38,6 @@ public class User extends DB_Element
      */
     public String toString()
     {
-        return a;
+        return "[" + stID + "]" + name;
     }
-
 }
