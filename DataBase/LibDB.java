@@ -1,12 +1,14 @@
 package DataBase;
 import java.util.*;
+import myClass.DB_Element;
+
 /**
  * LibDB 클래스의 설명을 작성하세요.
  *
  * @author (작성자 이름)
  * @version (버전 번호 또는 작성한 날짜)
  */
-public class LibDB<T>
+public class LibDB<T extends DB_Element>
 {
     private ArrayList<T> db;
 
@@ -24,9 +26,9 @@ public class LibDB<T>
      * @param  y  메소드의 샘플 파라미터
      * @return    x 더하기 y의 결과값을 반환
      */
-    public void addElement(T)
+    public void addElement(T element)
     {
-        
+        db.add(element);
     }
 
     /**
@@ -37,7 +39,14 @@ public class LibDB<T>
      */
     public T findElement(String id)
     {
-        
+        Iterator<T> it = db.iterator();
+        while(it.hasNext()){
+            T element = it.next();
+            if(element.getID().equals(id)){
+                return element;
+            }
+        }
+        return null;
     }
 
     /**
@@ -48,6 +57,8 @@ public class LibDB<T>
      */
     public void printAllElements()
     {
-        
+        for(T element : db){
+            System.out.println(element);
+        }
     }
 }
