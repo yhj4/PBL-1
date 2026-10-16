@@ -7,7 +7,6 @@
  */
 public class LibraryManagementSystem
 {
-
     /**
      * LibraryManagementSystem 클래스의 객체 생성자
      */
@@ -57,7 +56,7 @@ public class LibraryManagementSystem
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-
+       
     }
 
     /**
@@ -67,7 +66,7 @@ public class LibraryManagementSystem
      * @return    x 와 y의 합
      */
     public LibDB<User> setUserDB(String userFile)
-    {
+    { 
         
     }
 }
