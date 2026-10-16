@@ -18,6 +18,10 @@ public class App
         User user1 = new User (2025320001, "Kim");
         User user2 = new User (2024320002, "Lee");
         User user3 = new User (2023320003, "Park");
-
+        
+        userDB.addElement(user1);
+        userDB.addElement(user2);
+        userDB.addElement(user3);
+        
     }
 }
