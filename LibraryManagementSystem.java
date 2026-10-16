@@ -1,3 +1,7 @@
+import java.util.*;
+import DataBase.LibDB;
+import myClass.Book;
+import myClass.User;
 
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
@@ -7,6 +11,10 @@
  */
 public class LibraryManagementSystem
 {
+    LibDB<Book> bookDB;
+    LibDB<User> userDB;
+    HashMap<User, Book> loanDB;
+    
     /**
      * LibraryManagementSystem 클래스의 객체 생성자
      */
