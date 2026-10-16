@@ -1,4 +1,7 @@
-
+import java.util.*;
+import myClass.DB_Element;
+import myClass.User;
+import myClass.Book;
 /**
  * App 클래스의 설명을 작성하세요.
  *
@@ -8,6 +11,10 @@
 public class App
 {
     public static void main(String[] args){
+        User user1 = new User (2025320001, "Kim");
+        User user2 = new User (2024320002, "Lee");
+        User user3 = new User (2023320003, "Park");
+        
         
     }
 }
