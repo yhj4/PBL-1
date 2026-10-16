@@ -15,7 +15,7 @@ public class LibDB<T>
      */
     public LibDB()
     {
-
+        ArrayList<T> db = new ArrayList<T>();
     }
 
     /**
