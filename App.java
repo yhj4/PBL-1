@@ -1,4 +1,5 @@
 import java.util.*;
+import DataBase.LibDB;
 import myClass.DB_Element;
 import myClass.User;
 import myClass.Book;
@@ -11,10 +12,12 @@ import myClass.Book;
 public class App
 {
     public static void main(String[] args){
+        LibDB<User> userDB = new LibDB<User>();
+        LibDB<Book> bookDb = new LibDB<Book>();
+        
         User user1 = new User (2025320001, "Kim");
         User user2 = new User (2024320002, "Lee");
         User user3 = new User (2023320003, "Park");
-        
-        
+
     }
 }
