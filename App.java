@@ -1,4 +1,5 @@
 import java.util.*;
+import java.io.*;
 import DataBase.LibDB;
 import myClass.DB_Element;
 import myClass.User;
@@ -13,16 +14,21 @@ import myClass.Book;
 public class App
 {
     public static void main(String[] args){
+        System.out.println("----- 이용자 명단 -----");
         LibDB<User> userDB = new LibDB<User>();
         LibDB<Book> bookDb = new LibDB<Book>();
         
-        User user1 = new User (2025320001, "Kim");
-        User user2 = new User (2024320002, "Lee");
-        User user3 = new User (2023320003, "Park");
-        
-        userDB.addElement(user1);
-        userDB.addElement(user2);
-        userDB.addElement(user3);
-        
+        FileReader fin = null;
+        try{
+            fin = new FileReader("C://Temp//UserData2025.txt");
+            int c;
+            while((c = fin.read()) != -1){
+                System.out.print((char)c);
+            }
+            fin.close();
+        }
+        catch(IOException e){
+            System.out.println("입출력 오류");
+        }
     }
 }
