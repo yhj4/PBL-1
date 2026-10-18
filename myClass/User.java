@@ -16,7 +16,7 @@ public class User extends DB_Element
      * @param stID 학번
      * @param name 이름
      */
-    public User(Integer stID, String name)
+    public User(int stID, String name)
     {
         this.stID = stID;
         this.name = name;
