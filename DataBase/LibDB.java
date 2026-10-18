@@ -3,10 +3,10 @@ import java.util.*;
 import myClass.DB_Element;
 
 /**
- * LibDB 클래스의 설명을 작성하세요.
+ * LibDB 책DB와 이용자DB로 사용되는 Generic크래스
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2023320018_김현중, 2023320030_권종빈, 2023320035_윤효준)
+ * @version (2026.10.18)
  */
 public class LibDB<T extends DB_Element>
 {
@@ -14,6 +14,7 @@ public class LibDB<T extends DB_Element>
 
     /**
      * LibDB 클래스의 객체 생성자
+     * 
      */
     public LibDB()
     {
@@ -21,10 +22,9 @@ public class LibDB<T extends DB_Element>
     }
 
     /**
-     * 데이터베이스에 요소를 1개 추가
+     * 데이터베이스에 요소를 1개 추가하는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * @param element 요소
      */
     public void addElement(T element)
     {
@@ -32,10 +32,10 @@ public class LibDB<T extends DB_Element>
     }
 
     /**
-     * 데이터베이스에 저장된 요소를 id로 찾아내는 메소드
+     * 데이터베이스에 저장된 요소를 id로 찾아서 리턴해주는 메소드
      *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * @param id 찾으려는 요소의ID
+     * @return 찾은 요소
      */
     public T findElement(String id)
     {
@@ -50,10 +50,7 @@ public class LibDB<T extends DB_Element>
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * 데이터베이스에 저장된 모든 요소를 출력하는 메소드
      */
     public void printAllElements()
     {
