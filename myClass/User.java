@@ -38,6 +38,6 @@ public class User extends DB_Element
      */
     public String toString()
     {
-        return "[" + stID + "]" + name;
+        return "[" + stID + "] " + name;
     }
 }

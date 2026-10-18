@@ -37,6 +37,7 @@ public class LibraryManagementSystem
     {
         User user = userDB.findElement(userID);
         Book book = bookDB.findElement(bookID);
+        loanDB.put(user, book);
     }
 
     /**
@@ -63,7 +64,7 @@ public class LibraryManagementSystem
      * @param  y  메소드의 샘플 파라미터
      * @return    x 와 y의 합
      */
-    public void pirntLoanList()
+    public void printLoanList()
     {
         System.out.println();
         System.out.println("----- 대출 현황 -----");
@@ -102,7 +103,7 @@ public class LibraryManagementSystem
                 String publisher = st.nextToken();
                 int year = Integer.parseInt(st.nextToken());
 
-                bookDB.addElement(new Book(bookID, title, author, publisher, year));
+                bookDB.addElement(new Book(author, bookID, publisher, title, year));
             }
             scanner.close();
         }

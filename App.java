@@ -14,21 +14,16 @@ import myClass.Book;
 public class App
 {
     public static void main(String[] args){
-        System.out.println("----- 이용자 명단 -----");
-        LibDB<User> userDB = new LibDB<User>();
-        LibDB<Book> bookDb = new LibDB<Book>();
+        LibraryManagementSystem libMS = new LibraryManagementSystem();
+        LibDB<User> userDB = libMS.setUserDB("c:\\Temp\\UserData2025.txt");
+        libMS.printDB(userDB);
+        LibDB<Book> bookDB = libMS.setBookDB("c:\\Temp\\BookData2025.txt");
+        libMS.printDB(bookDB);
         
-        FileReader fin = null;
-        try{
-            fin = new FileReader("C://Temp//UserData2025.txt");
-            int c;
-            while((c = fin.read()) != -1){
-                System.out.print((char)c);
-            }
-            fin.close();
-        }
-        catch(IOException e){
-            System.out.println("입출력 오류");
-        }
+        libMS.borrowBook("2025320001", "B02");
+        libMS.borrowBook("2024320002", "B03");
+        libMS.borrowBook("2023320003", "B04");
+        
+        libMS.printLoanList();
     }
 }
