@@ -17,7 +17,7 @@ public class LibDB<T extends DB_Element>
      */
     public LibDB()
     {
-        ArrayList<T> db = new ArrayList<T>();
+        db = new ArrayList<T>();
     }
 
     /**
