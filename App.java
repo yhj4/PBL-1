@@ -14,7 +14,7 @@ import myClass.Book;
 public class App
 {
     public static void main(String[] args){
-        System.out.println("----- 이용자 명단 -----");
+        System.out.println("----- 이용자 목록 출력 -----");
         LibDB<User> userDB = new LibDB<User>();
         LibDB<Book> bookDb = new LibDB<Book>();
         
