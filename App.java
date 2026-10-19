@@ -1,3 +1,4 @@
+
 import java.util.*;
 import java.io.*;
 import DataBase.LibDB;
@@ -13,17 +14,32 @@ import myClass.Book;
  */
 public class App
 {
-    public static void main(String[] args){
+    public static void main(String[] args)
+    {
+        LibraryManagementSystem libMS =
+            new LibraryManagementSystem();
 
-        LibraryManagementSystem libMS = new LibraryManagementSystem();
-        LibDB<User> userDB = libMS.setUserDB("c:\\Temp\\UserData2025.txt");
+        System.out.println("----- 이용자 목록 출력 -----");
+
+        LibDB<User> userDB =
+            libMS.setUserDB("C:\\Temp\\UserData2025.txt");
+
         libMS.printDB(userDB);
-        LibDB<Book> bookDB = libMS.setBookDB("c:\\Temp\\BookData2025.txt");
+
+        System.out.println("----- 도서 목록 출력 -----");
+
+        LibDB<Book> bookDB =
+            libMS.setBookDB("C:\\Temp\\BookData2025.txt");
+
         libMS.printDB(bookDB);
+
+        System.out.println("----- 도서 대출 처리 -----");
 
         libMS.borrowBook("2025320001", "B02");
         libMS.borrowBook("2024320002", "B03");
         libMS.borrowBook("2023320003", "B04");
+
+        System.out.println("----- 대출 목록 출력 -----");
 
         libMS.printLoanList();
     }
