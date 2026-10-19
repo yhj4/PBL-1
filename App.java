@@ -14,7 +14,6 @@ import myClass.Book;
 public class App
 {
     public static void main(String[] args){
-
         System.out.println("----- 이용자 목록 출력 -----");
         LibDB<User> userDB = new LibDB<User>();
         LibDB<Book> bookDb = new LibDB<Book>();
@@ -31,7 +30,6 @@ public class App
         catch(IOException e){
             System.out.println("입출력 오류");
         }
-
         LibraryManagementSystem libMS = new LibraryManagementSystem();
         LibDB<User> userDB = libMS.setUserDB("c:\\Temp\\UserData2025.txt");
         libMS.printDB(userDB);
